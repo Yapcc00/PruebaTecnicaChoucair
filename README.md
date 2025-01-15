@@ -25,5 +25,5 @@ Este proyecto es un reto técnico basado en la plataforma **OrangeHRM**. El obje
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tuusuario/orangehrm-automation-challenge.git
-cd orangehrm-automation-challenge
+git clone https://github.com/tuusuario/orangehrm-automation-challenge.git](https://github.com/Yapcc00/PruebaTecnicaChoucair.git)
+
