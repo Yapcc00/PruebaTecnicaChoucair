@@ -30,7 +30,7 @@ public class FormularioCandidatoUI {
             .locatedBy("//label[@data-v-6179b72a]//input[@type='checkbox']");
 
     public static final Target BTN_PUESTO = Target.the("Vacancy dropdown button")
-            .located(By.className(".oxd-select-text--after")); //
+            .located(By.xpath("//div[@class='oxd-select-text--after']")); //
   public static final Target BTN_RECRUITMEN = Target.the("boton recluta")
             .located(By.xpath("//a[@href='/web/index.php/recruitment/viewRecruitmentModule']"));
 

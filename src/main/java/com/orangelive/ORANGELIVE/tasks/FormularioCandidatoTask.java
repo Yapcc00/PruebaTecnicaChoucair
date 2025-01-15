@@ -1,15 +1,26 @@
 package com.orangelive.ORANGELIVE.tasks;
 
 import com.orangelive.ORANGELIVE.questions.ValidarStatus;
+import com.orangelive.ORANGELIVE.userinterfaces.AgregarCandidatoUI;
 import com.orangelive.ORANGELIVE.userinterfaces.FormularioCandidatoUI;
+import net.serenitybdd.core.annotations.findby.By;
+import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.MoveMouse;
+import net.serenitybdd.screenplay.actions.SelectFromOptions;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import static com.orangelive.ORANGELIVE.userinterfaces.FormularioCandidatoUI.*;
+import static java.awt.SystemColor.window;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 import static org.hamcrest.core.IsEqual.equalTo;
@@ -27,10 +38,10 @@ public class FormularioCandidatoTask implements Task {
         actor.attemptsTo(Enter.theValue("oscarandres@gmail.com").into(FormularioCandidatoUI.INPUT_EMAIL));
         actor.attemptsTo(Enter.theValue("45346564347").into(FormularioCandidatoUI.INPUT_PHONE));
         actor.attemptsTo(
-                //el botón del dropdown esté visible
+                // Asegúrate de que el botón del dropdown esté visible
                 WaitUntil.the(FormularioCandidatoUI.BTN_PUESTO, isVisible()).forNoMoreThan(10).seconds(),
 
-                // botón para desplegar las opciones
+                // Haz clic en el botón para desplegar las opciones
                 Click.on(FormularioCandidatoUI.BTN_PUESTO),
 
                 // Espera a que el dropdown esté visible
